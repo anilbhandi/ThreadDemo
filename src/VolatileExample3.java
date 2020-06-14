@@ -1,5 +1,5 @@
 
-class Machine extends Thread {
+class Machine {
 	public volatile int counter = 0;
 
 	public int getCounter() {
@@ -19,11 +19,12 @@ class Machine extends Thread {
 				for (int i = 0; i < 100; i++) {
 					// increment();
 					counter++;
-					try {
-						Thread.sleep(10);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
+					//System.out.println("Thread1");
+//					try {
+//						Thread.sleep(10);
+//					} catch (InterruptedException e) {
+//						e.printStackTrace();
+//					}
 				}
 			}
 
@@ -36,11 +37,12 @@ class Machine extends Thread {
 				for (int i = 0; i < 100; i++) {
 					// increment();
 					counter++;
-					try {
+					//System.out.println("Thread2");
+					/*try {
 						Thread.sleep(10);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
-					}
+					}*/
 				}
 			}
 
