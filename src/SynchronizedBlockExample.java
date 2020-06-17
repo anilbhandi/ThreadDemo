@@ -18,6 +18,7 @@ public class SynchronizedBlockExample {
 
 	public synchronized static void addAgain() {
 		synchronized (lock2) {
+			System.out.println("Thead 2");
 			count2++;
 		}
 	}
