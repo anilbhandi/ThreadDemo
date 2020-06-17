@@ -1,4 +1,9 @@
 
+/**
+ * Volatile & synchronized example
+ * @author anilbhandi
+ *
+ */
 class Machine {
 	public volatile int counter = 0;
 
@@ -49,14 +54,15 @@ class Machine {
 		});
 
 		t1.start();
-		t2.start();
+		
 
 		try {
 			t1.join();
-			t2.join();
+			//t2.join();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		t2.start();
 
 	}
 
