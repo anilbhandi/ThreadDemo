@@ -7,10 +7,15 @@ public class LockExample {
 	public static Lock lock = new ReentrantLock();
 
 	public static void increment() {
+		//Use try catch if any exception lock will not be released
 		lock.lock();
+		
 		try {
-			counter++;
 			Thread.sleep(100);
+			for (int i = 0; i < 1000; i++) {
+				counter++;
+			}
+			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
